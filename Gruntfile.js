@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
 			options: {
 				// don't spawn multiple instances of watch tasks
 				nospawn: true,
-				// don't close browser tab if livereloading
+				// don't close connect server if livereloading
 				livereload: true
 			},
 			// watch for .jsx files
