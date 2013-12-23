@@ -9,6 +9,9 @@ var ChatItem = React.createClass({
 });
 
 var ChatList = React.createClass({
+	componentDidUpdate: function() {
+		document.getElementById('chatList').scrollTop = 999999;
+	},
 	render: function() {
 		var messages = [];
 
@@ -17,7 +20,7 @@ var ChatList = React.createClass({
 		}.bind(this));
 
 		return (
-			<div id="chat-list">
+			<div id="chatList">
 				<ul>{messages}</ul>
 			</div>
 		);
@@ -43,7 +46,7 @@ var ChatApp = React.createClass({
 		return (
 			<div>
 				<ChatList messages={this.state.messages} />
-				<div>
+				<div id="chatterBox">
 					<input 
 						id="text-input" 
 						value={this.state.text}
@@ -60,5 +63,5 @@ var ChatApp = React.createClass({
 
 React.renderComponent(
 	<ChatApp/>,
-	document.getElementById('chat-area')
+	document.getElementById('eschat-roomView')
 );

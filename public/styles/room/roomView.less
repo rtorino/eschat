@@ -1,0 +1,34 @@
+.box-sized {
+	box-sizing: border-box;
+}
+
+#eschat-roomView {
+	.box-sized;
+	padding: 0px;
+	height: 100%;
+	border-left: 1px solid #ccc;
+
+	#chatList {
+		position: absolute;
+		top: 0px;
+		bottom: 50px;
+		width: 100%;
+		overflow: auto;
+	}
+
+	#chatterBox {
+		.box-sized;
+		height: 50px;
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		border-top: 1px solid #ccc;
+		padding: 7px 10px;
+
+		>input {
+			.box-sized;
+			height: 36px;
+			padding: 4px 5px;
+		}
+	}
+}
