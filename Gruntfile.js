@@ -31,12 +31,6 @@ module.exports = function( grunt ) {
 				// don't close connect server if livereloading
 				livereload: true
 			},
-			// watch for .jsx files
-			react: {
-				files: [ 'public/scripts/{,*/}*.jsx' ],
-				// execute tasks `react` if a .jsx file changes
-				tasks: [ 'react' ]
-			},
 			// watch for .less files
 			less: {
 				files: [ 'public/styles/{,*/}*.less' ],
@@ -48,7 +42,8 @@ module.exports = function( grunt ) {
 					livereload: 35729
 				},
 				files: [
-					'public/scripts/{,*/}*.jsx',
+					'public/index.html',
+					'public/scripts/{,*/}*.js',
 					'public/styles/{,*/}*.less'
 				]
 			}
@@ -111,5 +106,5 @@ module.exports = function( grunt ) {
 	} );
 	
 	// execute tasks in order
-	grunt.registerTask( 'default', [ 'clean', 'react', 'less', 'connect', 'open', 'watch' ] );
+	grunt.registerTask( 'default', [ 'clean', 'less', 'connect', 'open', 'watch' ] );
 };

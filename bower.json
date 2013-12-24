@@ -18,6 +18,8 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.3",
-    "react": "~0.8.0"
+    "react": "~0.8.0",
+    "require-jsx": "*",
+    "requirejs": "~2.1.9"
   }
 }
